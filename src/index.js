@@ -1,6 +1,6 @@
-import { titles, buttons, projectsListText, projectsListAttributes, newProjectFieldAttributes, Project1, firstThreeTaskFields, priorityTaskFieldLabel, priorityTaskField, statusTaskField } from './config.js';
+import { titles, buttons, projectsListText, projectsListAttributes, newProjectFieldAttributes, firstThreeTaskFields, priorityTaskFieldLabel, priorityTaskField, statusTaskField } from './config.js';
 
-import { prepareDate, createAndAppendDate, prepareObjectData, prepareTitleData, createAndAppendTitles, prepareButtonData, createAndAppendButtons, createAndAppendProjectsListAndField, createAndAppendTasksTitleAndList, prepareThreeTaskFieldsData, preparePriorityTaskFieldData, createAndAppendTaskFields, createAndAppendStatusTaskField, switchStylesheet } from './page_load2.js';
+import { prepareDate, createAndAppendDate, prepareObjectData, prepareTitleData, createAndAppendTitles, prepareButtonData, createAndAppendButtons, createAndAppendProjectsListAndField, Project1, Project2, Project3, Project4, Project5, Project6, Project7, Project8, Project9, createAndAppendTasksTitleAndList, prepareThreeTaskFieldsData, preparePriorityTaskFieldData, createAndAppendTaskFields, createAndAppendStatusTaskField, switchStylesheet, createNewTask, selectProject } from './page_load2.js';
 
 const pageInfo = document.querySelector('div');
 
@@ -14,11 +14,13 @@ createAndAppendTitles(processedTitles, pageInfo);
 
 createAndAppendProjectsListAndField(projectsListText, projectsListAttributes, newProjectFieldAttributes, pageInfo);
 
+selectProject(pageInfo);
+
 const processedButtons = prepareObjectData(buttons, prepareButtonData);
 createAndAppendButtons(processedButtons, pageInfo);
 
 // const processedTasksTitleAndListData = prepareObjectData(Project1, prepareTasksTitleAndListData);
-createAndAppendTasksTitleAndList(Project1,pageInfo);
+createAndAppendTasksTitleAndList(Project1, pageInfo);
 
 const processedThreeTaskFields = prepareObjectData(firstThreeTaskFields, prepareThreeTaskFieldsData);
 const processedPriorityTaskField = prepareObjectData(priorityTaskField, preparePriorityTaskFieldData)
@@ -34,7 +36,7 @@ Array.from(taskEditDivs).forEach(function(div) {
 
 var newTaskButton = document.getElementById('new-task');
 
-newTaskButton.addEventListener('click', switchStylesheet);
+newTaskButton.addEventListener('click', createNewTask);
 
 // document.getElementsByClassName('task-edit').addEventListener('click', function() {
 //     var stylesheet = document.getElementById('stylesheetToSwitch');
