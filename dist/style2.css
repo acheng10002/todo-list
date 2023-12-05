@@ -52,6 +52,12 @@ ul {
 }
 
 li {
+<<<<<<< HEAD
+=======
+    display: flex;
+    align-items: center;
+    justify-content: center;
+>>>>>>> 7b4b0240241a8ea82ffd636037c24a07ed5c83ab
     height: 4.5vh;
     width: 15vw;
     border-top: 2px dashed #a2a5a6;
@@ -93,7 +99,11 @@ button {
 }
 
 .date {
+<<<<<<< HEAD
     /* grid-area: 1 / 2 / 2 / 3; */
+=======
+    /* grid-area: 1 / 2 / 2 / 3 */
+>>>>>>> 7b4b0240241a8ea82ffd636037c24a07ed5c83ab
     grid-area: 1 / 2 / 2 / 4; 
     align-self: end !important;
     padding-top: 50px;
@@ -103,6 +113,14 @@ button {
 
 .project-title {
     grid-area: 2 / 2 / 3 / 4;
+<<<<<<< HEAD
+=======
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 17px;
+    font-size: 20px; 
+>>>>>>> 7b4b0240241a8ea82ffd636037c24a07ed5c83ab
 }
 
 .tasks-list {
@@ -147,7 +165,10 @@ button {
     background-color: rgba(252, 244, 3, 0.5);
 }
 
+<<<<<<< HEAD
 li,
+=======
+>>>>>>> 7b4b0240241a8ea82ffd636037c24a07ed5c83ab
 .task-description,
 .task-duedate,
 .task-edit {
@@ -179,9 +200,14 @@ li,
 }
 
 .task-duedate {
+<<<<<<< HEAD
     grid-area: 1 / 3 / 3 / 4; 
     height: 8vh;
     width: 5vw;
+=======
+    width: 2.5vw;
+    padding: 9px;
+>>>>>>> 7b4b0240241a8ea82ffd636037c24a07ed5c83ab
     border-left: 1px solid #a2a5a6;
     font-size: 13px;
     overflow-x: hidden;
@@ -204,6 +230,24 @@ li,
 .task-edit,
 label.priority {
     cursor: pointer;
+}
+
+.hide {
+    display: none;
+}
+
+.task:hover .task-edit {
+    display: flex;
+} 
+
+.task-edit {
+    display: none;
+    height: 8vh;
+    width: 3.25vw;
+    border-right: 1px solid #a2a5a6;
+    margin: 0; 
+    text-align: center;
+    background-color: white;
 }
 
 .hide {
