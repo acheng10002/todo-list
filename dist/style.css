@@ -5,7 +5,7 @@
 
 #content {
     display: grid;
-    grid: 5vh 9vh 76vh 10vh / 18vw 41vw 41vw;
+    grid: 5vh 9vh 70vh 8vh 8vh / 18vw 41vw 41vw;
     place-items: stretch;
     height: 100vh;
     width: 100vw; 
@@ -68,6 +68,20 @@ li {
     grid-area: 4 / 1 / 5 / 2;
 }
 
+#new-project,
+#save-task {
+    margin-bottom: 0;
+}
+
+.delete-project {
+    grid-area: 5 / 1 / 6 / 2;
+}
+
+#delete-project,
+#delete-task {
+    align-self: start;
+}
+
 #add-new-project {
     height: 2.75vh;
     width: 15vw;
@@ -77,14 +91,13 @@ li {
 }
 
 button {
-    grid-area: 4 / 1 / 5 / 2;
-    height: 42px;
-    width: 122px;
+    height: 30px;
+    width: 115px;
     border: none !important;
-    border-radius: 13px;
-    margin-bottom: 40px;
+    border-radius: 8px;
+    margin-bottom: 30px; 
     font-family: 'Lato', sans-serif;
-    font-size: 16px; 
+    font-size: 15px; 
     background-color: #95d7f0;
 
 }
@@ -230,8 +243,11 @@ input[type="date"] {
 }
 
 .new-task {
-    grid-area: 4 / 2 / 5 / 3;
-    font-size: 17px;
+    grid-area: 4 / 2 / 6 / 3;
+}
+
+#new-task {
+    align-self: center;
 }
 
 .each-task-title {
@@ -341,6 +357,12 @@ textarea {
 
 .save-task {
     grid-area: 4 / 3 / 5 / 4;
+    border-left: 5px outset #adb1b3;
+    border-right: 5px outset #adb1b3;
+}
+
+.delete-task {
+    grid-area: 5 / 3 / 6 / 4;
     border: 5px outset #adb1b3;
     border-top: none;
 }

@@ -1,15 +1,11 @@
-<<<<<<< HEAD
 const projectsListText = {
-    p1: "Project 1",
-    p2: "Project 2",
-    p3: "Project 3",
-    p4: "Project 4",
-    p5: "Project 5",
-    p6: "Project 6",
-    p7: "Project 7",
-    p8: "Project 8",
-    p9: "Project 9"
+    p1: "Her Project",
+    p2: "His Project",
+    p3: "Their Project",
+    p4: "Our Project",
+    p5: "My Project"
 }
+
 
 const titles = {
     'projects-title': {
@@ -20,13 +16,6 @@ const titles = {
         text: "Projects"
 
     },
-    // 'project-title': {
-    //     position: "middle",
-    //     image: "./img/folder-arrow-down.svg",
-    //     alt: "arrow pointing right icon",
-    //     text: projectsListText[1],
-    //     id: "tasks-list-project"
-    // },
     'each-task-title': {
         position: "right",
         image: "./img/calendar-check.svg",
@@ -42,6 +31,11 @@ const buttons = {
         id: "new-project",
         text: "+ New Project"
     },
+    'delete-project': {
+        position: "left",
+        id: "delete-project",
+        text: "Delete Project"
+    },
     'new-task': {
         position: "middle",
         id: "new-task",
@@ -51,8 +45,12 @@ const buttons = {
         position: "right",
         id: "save-task",
         text: "Save"
+    },
+    'delete-task': {
+        position: "right",
+        id: "delete-task",
+        text: "Delete Task"
     }
-
 }
 
 
@@ -70,28 +68,143 @@ const newProjectFieldAttributes = {
 }
 
 
-/* 
-formData = {
-    'person1': {
-        'Name': 'John Doe',
-        'Email': 'john.doe@example.com',
-        'Comment': 'This is a test comment.',
-        'Country': 'USA'
+const Project1 = {
+    'Project': {
+        position: "middle",
+        image: "./img/folder-arrow-down.svg",
+        alt: "arrow pointing right icon",
+        text: "Her Project"
     },
-    'person2': {
-        'Name': 'Jane Doe',
-        'Email': 'john.doe@example.com',
-        'Comment': 'This is a test comment.',
-        'Country': 'USA'
+    '0': {
+        'task-edit': "Edit",
+        'task-title': "Task 1 Title",
+        'task-description': "Diam maecenas ultricies mi eget mauris pharetra et. Aliquam vestibulum morbi blandit cursus risus at ultrices.",
+        'task-duedate': "12/06/2023",
+        'priority-level': "high",
+        'status': "In Progress"
     },
-    'person3': {
-        'Name': 'Jack Doe',
-        'Email': 'john.doe@example.com',
-        'Comment': 'This is a test comment.',
-        'Country': 'USA'
+    '1': {
+        'task-edit': "Edit",
+        'task-title': "Task 2 Title",
+        'task-description': "In fermentum et sollicitudin ac orci phasellus. Risus feugiat in ante metus dictum.",
+        'task-duedate': "12/15/2023",
+        'priority-level': "medium",
+        'status': "Complete"
+    },
+    '2': {
+        'task-edit': "Edit",
+        'task-title': "Task 3 Title",
+        'task-description': "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        'task-duedate': "12/18/2023",
+        'priority-level': "medium",
+        'status': "In Progress"
+    },
+    '3': {
+        'task-edit': "Edit",
+        'task-title': "Task 4 Title",
+        'task-description': "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        'task-duedate': "01/04/2024",
+        'priority-level': "low",
+        'status': "Not Started"
     }
 }
-*/
+
+
+const Project2 = {
+    'Project': {
+        position: "middle",
+        image: "./img/folder-arrow-down.svg",
+        alt: "arrow pointing right icon",
+        text: "His Project"
+    },
+    '0': {
+        'task-edit': "Edit",
+        'task-title': "Task 1 Title",
+        'task-description': "Diam maecenas ultricies mi eget mauris pharetra et. Aliquam vestibulum morbi blandit cursus risus at ultrices.",
+        'task-duedate': "12/06/2023",
+        'priority-level': "high",
+        'status': "In Progress"
+    },
+    '1': {
+        'task-edit': "Edit",
+        'task-title': "Task 2 Title",
+        'task-description': "In fermentum et sollicitudin ac orci phasellus. Risus feugiat in ante metus dictum.",
+        'task-duedate': "12/15/2023",
+        'priority-level': "medium",
+        'status': "Complete"
+    },
+    '2': {
+        'task-edit': "Edit",
+        'task-title': "Task 3 Title",
+        'task-description': "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        'task-duedate': "12/18/2023",
+        'priority-level': "medium",
+        'status': "In Progress"
+    }
+}
+
+
+const Project3 = {
+    'Project': {
+        position: "middle",
+        image: "./img/folder-arrow-down.svg",
+        alt: "arrow pointing right icon",
+        text: "Their Project"
+    },
+    '0': {
+        'task-edit': "Edit",
+        'task-title': "Task 1 Title",
+        'task-description': "Diam maecenas ultricies mi eget mauris pharetra et. Aliquam vestibulum morbi blandit cursus risus at ultrices.",
+        'task-duedate': "12/06/2023",
+        'priority-level': "high",
+        'status': "In Progress"
+    },
+    '1': {
+        'task-edit': "Edit",
+        'task-title': "Task 2 Title",
+        'task-description': "In fermentum et sollicitudin ac orci phasellus. Risus feugiat in ante metus dictum.",
+        'task-duedate': "12/15/2023",
+        'priority-level': "medium",
+        'status': "Complete"
+    }
+}
+
+
+const Project4 = {
+    'Project': {
+        position: "middle",
+        image: "./img/folder-arrow-down.svg",
+        alt: "arrow pointing right icon",
+        text: "Our Project"
+    },
+    '0': {
+        'task-edit': "Edit",
+        'task-title': "Task 1 Title",
+        'task-description': "Diam maecenas ultricies mi eget mauris pharetra et. Aliquam vestibulum morbi blandit cursus risus at ultrices.",
+        'task-duedate': "12/06/2023",
+        'priority-level': "high",
+        'status': "In Progress"
+    }
+}
+
+
+const Project5 = {
+    'Project': {
+        position: "middle",
+        image: "./img/folder-arrow-down.svg",
+        alt: "arrow pointing right icon",
+        text: "My Project"
+    }
+}
+
+
+const projectMapping = {
+    Project1: Project1,
+    Project2: Project2,
+    Project3: Project3,
+    Project4: Project4,
+    Project5: Project5
+}
 
 
 const firstThreeTaskFields = {
@@ -121,7 +234,6 @@ const firstThreeTaskFields = {
 
 
 const priorityTaskFieldLabel = {
-    for: "task-priority",
     'label-id': "task-priority-label",
     'label-text': "Priority:" 
 }
@@ -186,30 +298,4 @@ const statusTaskField = {
         ]
 }
 
-export { titles, buttons, projectsListText, newProjectFieldAttributes, projectsListAttributes, firstThreeTaskFields, priorityTaskFieldLabel, priorityTaskField, statusTaskField };
-=======
-const titles = {
-    'projects-title': {
-        'position': "left",
-        'image': "./img/folders-multiple.svg",
-        'alt': "multiple folders icon",
-        'text-class': "projects-title-text",
-        'text': "Projects"
-
-    },
-    'project-title': {
-        'position': "middle",
-        'image': "./img/arrow-right.svg",
-        'alt': "arrow pointing right icon",
-        'text': "Project 1"
-    },
-    'task-title': {
-        'position': "right",
-        'image': "./img/calendar-check.svg",
-        'alt': "calendar with check mark icon",
-        'text': "Task"
-    }
-}
-
-export { titles };
->>>>>>> 7b4b0240241a8ea82ffd636037c24a07ed5c83ab
+export { titles, buttons, projectsListText, newProjectFieldAttributes, Project1, Project2, Project3, Project4, Project5, projectMapping, projectsListAttributes, firstThreeTaskFields, priorityTaskFieldLabel, priorityTaskField, statusTaskField };
